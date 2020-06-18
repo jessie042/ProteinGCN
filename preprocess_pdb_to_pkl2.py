@@ -174,7 +174,7 @@ def processDirectory(directory, max_neighbors, savepath, protein_id_prop_file):
 			writer = csv.writer(file)
 			#global_target, local_targets = get_targets(directory, filename)
 			#writer.writerow((save_filename, global_target, local_targets))
-			writer.writerow((save_filename,1,[1]*seq_len))
+			writer.writerow((save_filename,0.1,[0.1]*seq_len))
 
 
 if get_pkl_flies:

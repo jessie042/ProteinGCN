@@ -5,9 +5,9 @@ def buildParser():
 
 	# Data source
 	parser.add('name',                                              help='Name of folder where result is saved')
-	parser.add('--pkl_dir',     default='./data/pkl/',              help='Source directory for pkl files')
-	parser.add('--protein_dir', default='./data/protein/',          help='Directory where all protein pdb files exist') # needed for inferring train/test sets
-	parser.add('--save_dir',    default='./data/pkl/results/',      help='Destination directory for results')
+	parser.add('--pkl_dir',     default='./data2/pkl/',              help='Source directory for pkl files')
+	parser.add('--protein_dir', default='./data2/protein/',          help='Directory where all protein pdb files exist') # needed for inferring train/test sets
+	parser.add('--save_dir',    default='./data2/pkl/results/',      help='Destination directory for results')
 	parser.add('--id_prop',     default='protein_id_prop.csv',      help='id_prop filename')
 	parser.add('--atom_init',   default='protein_atom_init.json',   help='atom_init filename')
 	parser.add('--pretrained',                                      help='Path to pretrained model')

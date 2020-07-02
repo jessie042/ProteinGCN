@@ -7,7 +7,6 @@ from tqdm import tqdm
 from joblib import Parallel, delayed
 from collections import defaultdict as ddict
 
-seq_len=404
 parser = argparse.ArgumentParser(description='Argument Parser')
 
 parser.add_argument('-datapath',            default='./data2/protein/',                  help='Directory where all protein pdb files exist')
@@ -174,7 +173,7 @@ def processDirectory(directory, max_neighbors, savepath, protein_id_prop_file):
 			writer = csv.writer(file)
 			#global_target, local_targets = get_targets(directory, filename)
 			#writer.writerow((save_filename, global_target, local_targets))
-			writer.writerow((save_filename,0.1,[0.1]*seq_len))
+			writer.writerow((save_filename,0.1,[0.1]*(amino_atom_idx[-1]+1)))
 
 
 if get_pkl_flies:
